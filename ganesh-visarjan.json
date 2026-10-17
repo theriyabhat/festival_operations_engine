@@ -1,0 +1,83 @@
+{
+  "id": "ganesh-visarjan",
+  "festival": {
+    "name": "Ganesh Visarjan (Lalbaug-Girgaon)",
+    "date": "2026-09-25",
+    "timings": { "start": "10:00", "end": "23:59" }
+  },
+  "sites": [
+    {
+      "id": "lalbaug",
+      "name": "Lalbaug Pandal Zone",
+      "lat": 18.9948, "lng": 72.8337,
+      "capacity": 4000,
+      "slotMinutes": 30,
+      "entryBaseline": 600, "exitBaseline": 500,
+      "facilities": ["medical", "drinking-water"],
+      "openingHours": { "open": "10:00", "close": "23:59" }
+    },
+    {
+      "id": "byculla-link",
+      "name": "Byculla Link Road",
+      "lat": 18.9780, "lng": 72.8330,
+      "capacity": 3000,
+      "slotMinutes": 30,
+      "entryBaseline": 400, "exitBaseline": 400,
+      "facilities": ["drinking-water"],
+      "openingHours": { "open": "10:00", "close": "23:59" }
+    },
+    {
+      "id": "grant-road",
+      "name": "Grant Road Junction",
+      "lat": 18.9640, "lng": 72.8160,
+      "capacity": 2500,
+      "slotMinutes": 30,
+      "entryBaseline": 350, "exitBaseline": 350,
+      "facilities": ["medical"],
+      "openingHours": { "open": "10:00", "close": "23:59" }
+    },
+    {
+      "id": "girgaon",
+      "name": "Girgaon Chowpatty Entry",
+      "lat": 18.9547, "lng": 72.8140,
+      "capacity": 5000,
+      "slotMinutes": 30,
+      "entryBaseline": 700, "exitBaseline": 650,
+      "facilities": ["medical", "drinking-water", "first-aid"],
+      "openingHours": { "open": "12:00", "close": "23:59" }
+    },
+    {
+      "id": "marine-drive",
+      "name": "Marine Drive Alternate Lane",
+      "lat": 18.9440, "lng": 72.8236,
+      "capacity": 3500,
+      "slotMinutes": 30,
+      "entryBaseline": 450, "exitBaseline": 450,
+      "facilities": ["drinking-water"],
+      "openingHours": { "open": "12:00", "close": "23:59" }
+    }
+  ],
+  "thresholds": { "amber": 0.7, "red": 0.9 },
+  "bins": [
+    { "siteId": "lalbaug", "count": 10, "capacityLitres": 240 },
+    { "siteId": "byculla-link", "count": 6, "capacityLitres": 240 },
+    { "siteId": "grant-road", "count": 5, "capacityLitres": 240 },
+    { "siteId": "girgaon", "count": 12, "capacityLitres": 240 },
+    { "siteId": "marine-drive", "count": 6, "capacityLitres": 240 }
+  ],
+  "wasteTypes": [
+    { "id": "flower", "label": "Flowers & garlands", "kgPerPerson": 0.05, "litresPerKg": 8 },
+    { "id": "food", "label": "Food waste", "kgPerPerson": 0.03, "litresPerKg": 2 },
+    { "id": "plastic", "label": "Plastic", "kgPerPerson": 0.02, "litresPerKg": 20 }
+  ],
+  "rules": {
+    "visitOrder": ["lalbaug", "girgaon"],
+    "maxGroupSize": 20
+  },
+  "adjacency": [
+    { "from": "lalbaug", "to": "byculla-link", "type": "alternate-lane" },
+    { "from": "byculla-link", "to": "grant-road", "type": "alternate-lane" },
+    { "from": "grant-road", "to": "girgaon", "type": "alternate-lane" },
+    { "from": "girgaon", "to": "marine-drive", "type": "alternate-lane" }
+  ]
+}
