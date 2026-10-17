@@ -1,0 +1,24 @@
+/* Saffron + deep-blue palette */
+:root {
+  --saffron: #ff9933;
+  --blue: #0b2a5b;
+  --bg: #fff8ef;
+  --card: #ffffff;
+  --text: #1b1b1b;
+}
+* { box-sizing: border-box; }
+body { margin: 0; font-family: system-ui, sans-serif; background: var(--bg); color: var(--text); }
+header {
+  background: var(--blue); color: #fff; padding: 12px 20px;
+  display: flex; align-items: center; justify-content: space-between;
+  border-bottom: 4px solid var(--saffron);
+}
+h1 { font-size: 1.2rem; margin: 0; }
+main { max-width: 900px; margin: 20px auto; padding: 0 12px; display: grid; gap: 16px; }
+.card { background: var(--card); border-radius: 8px; padding: 16px; box-shadow: 0 1px 4px rgba(0,0,0,.12); }
+.card h2 { margin-top: 0; color: var(--blue); }
+.badge { background: var(--saffron); color: #000; padding: 3px 10px; border-radius: 12px; font-size: .8rem; font-weight: 600; }
+table { width: 100%; border-collapse: collapse; }
+th, td { text-align: left; padding: 6px 8px; border-bottom: 1px solid #e5e5e5; }
+th { color: var(--blue); }
+@media (max-width: 600px) { th:nth-child(3), td:nth-child(3) { display: none; } }
