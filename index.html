@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Festival Operations Engine - Short Circuits</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header>
+    <h1>Festival Operations Engine</h1>
+    <span class="badge" id="modeBadge">...</span>
+  </header>
+
+  <main>
+    <section class="card">
+      <h2>Active festival profile</h2>
+      <label for="profileSelect">Profile:</label>
+      <select id="profileSelect"></select>
+      <p id="profileInfo">Loading...</p>
+    </section>
+
+    <section class="card">
+      <h2>Sites</h2>
+      <table>
+        <thead>
+          <tr><th>Site</th><th>Capacity</th><th>Slot</th><th>Hours</th></tr>
+        </thead>
+        <tbody id="siteRows"></tbody>
+      </table>
+    </section>
+  </main>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
